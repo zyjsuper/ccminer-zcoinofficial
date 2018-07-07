@@ -62,13 +62,13 @@ Error list:
 	cd /var/cuda-repo-9-2-local
 	dpkg -i --force-overwrite nvidia-396_396.26-0ubuntu1_amd64.deb
 	rerun apt-get install cuda
+	
+3.Nvcc command not found.
 
-
-3.Nvcc command not found
-	find / -name nvcc
-	/usr/local/cuda-9.2/bin/nvcc
-	add the path to /etc/profile
-	source /etc/profile
+	* find / -name nvcc
+	* /usr/local/cuda-9.2/bin/nvcc
+	* add the path to /etc/profile
+	* source /etc/profile
 
 
 
