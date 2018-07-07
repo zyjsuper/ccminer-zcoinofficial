@@ -41,34 +41,34 @@ Error list:
 -------------------
 1.libssl-dev error.
 
-"checking for SSL_library_init in -lssl... no
-configure: error: OpenSSL library required"
+	"checking for SSL_library_init in -lssl... no
+	configure: error: OpenSSL library required"
 
 
-Solution:(Copy from wiki)
+	Solution:(Copy from wiki)
 	There are two ways to initialize the OpenSSL library, and they depend on the version of the library you are using. If you are using OpenSSL 1.0.2 or below, then you would use SSL_library_init. If you are using OpenSSL 1.1.0 or above, then you would use OPENSSL_init_ssl. 
 	
-apt-get install libssl1.0-dev
+	apt-get install libssl1.0-dev
 
 2.Cuda install error.
-"dpkg: error processing archive /tmp/apt-dpkg-install-PypkDn/104-nvidia-396_396.26-0ubuntu1_amd64.deb (--unpack):
- trying to overwrite '/usr/lib/x86_64-linux-gnu/libGLX_indirect.so.0', which is also in package libglx-mesa0:amd64 18.0.5-0ubuntu0~18.04.1"
+	"dpkg: error processing archive /tmp/apt-dpkg-install-PypkDn/104-nvidia-396_396.26-0ubuntu1_amd64.deb (--unpack):
+	 trying to overwrite '/usr/lib/x86_64-linux-gnu/libGLX_indirect.so.0', which is also in package libglx-mesa0:amd64 18.0.5-0ubuntu0~18.04.1"
 
-`sudo dpkg -i cuda-repo-ubuntu1710-9-2-local_9.2.88-1_amd64.deb`
-`sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub`
-`sudo apt-get update`
-`sudo apt-get install cuda`
+	`sudo dpkg -i cuda-repo-ubuntu1710-9-2-local_9.2.88-1_amd64.deb`
+	`sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub`
+	`sudo apt-get update`
+	`sudo apt-get install cuda`
 
-cd /var/cuda-repo-9-2-local
-dpkg -i --force-overwrite nvidia-396_396.26-0ubuntu1_amd64.deb
-rerun apt-get install cuda
+	cd /var/cuda-repo-9-2-local
+	dpkg -i --force-overwrite nvidia-396_396.26-0ubuntu1_amd64.deb
+	rerun apt-get install cuda
 
 
 3.Nvcc command not found
-find / -name nvcc
-/usr/local/cuda-9.2/bin/nvcc
-add the path to /etc/profile
-source /etc/profile
+	find / -name nvcc
+	/usr/local/cuda-9.2/bin/nvcc
+	add the path to /etc/profile
+	source /etc/profile
 
 
 
